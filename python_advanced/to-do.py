@@ -5,7 +5,7 @@ file = 'to-do.txt'
 
 def add_task(file):
   task = input('Enter a task: ')
-  with open(file,'r') as data_base:
+  with open(file,'a+') as data_base:
     if data_base.read(1) == '':
       with open(file,'a') as data_base:
         data_base.write(f"{task}=incomplete\n")
@@ -62,7 +62,7 @@ quit_Todo = False
 
 while quit_Todo != True:
   user_input = input('Enter a command(add,view,remove,update,quit): ').lower()
-
+  
   if user_input == 'add':
     add_task(file)
 
@@ -78,6 +78,6 @@ while quit_Todo != True:
   elif user_input == 'quit':
     print('thanks for using.')
     quit_Todo = True
-  
+
   else:
     print('invalid input.')
