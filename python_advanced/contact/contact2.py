@@ -118,8 +118,8 @@ def main(file):
       print('thanks for using.')
       contact_app = True
   
-  else:
-    print('invalid input.')
+    else:
+      print('invalid input.')
 
 
 if __name__ == '__main__':
